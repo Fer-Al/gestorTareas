@@ -1,11 +1,12 @@
 // Importar la función para traer las tareas del LocalStorage
-import { getTasksTask } from "./task";
+import { getTasks } from "./task";
 
 // Función para visualizar las tareas
 export const renderTasks = () => {
     const taskList = document.getElementById("task-list");
     taskList.innerHTML = "";
     const tasks = getTasks();
+    console.log("tasks,", tasks)
     tasks.forEach((task) => {
         const li = document.createElement("li");
         li.setAttribute("data-id", task.id);
