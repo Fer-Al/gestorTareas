@@ -1,27 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
 /* Estilos generales */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #645092;
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(./imagenes/fondo.jpg);
 }
 
 /* Estilos para el contenedor principal */
 #app {
-    background-color: white;
+    background-color: #524caf;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: "Gaegu", sans-serif; color: #0a228f; justify-content: center;
+    justify-content: center;
+    
 }
 
 /* Estilos para el formulario */
 form {
     display: flex;
     justify-content: space-between;
+    background-color: #007bff;
+    
 }
 
 /* Estilos al input*/
@@ -31,6 +38,7 @@ input {
     margin-right: 10px;
     border: 1px solid #ddd;
     border-radius: 3px;
+    font-family: "Gaegu", sans-serif;
 }
 
 /* Estilos al botón*/
@@ -41,6 +49,8 @@ button {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    font-family: "Gaegu", sans-serif;
+    
 }
 
 /* Estilos de la lista */
@@ -51,7 +61,7 @@ ul {
 
 /*Estilos a los elementos de la lista*/
 li {
-    background-color: #f4f4f4;
+    background-color: #3156bb;
     padding: 10px;
     border: 1px solid #ddd;
     margin-top: 10px;
@@ -65,3 +75,41 @@ li.completed {
     text-decoration: line-through;
     color: #888;
 }
+
+/*** ESTILOS BOTÓN SLIDE CLOSE ***/
+.ov-btn-slide-close {
+    background: #fff; /* color de fondo */
+    color: #4741d7; /* color de fuente */
+    border: 2px solid #4741d7; /* tamaño y color de borde */
+    padding: 16px 20px;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .ov-btn-slide-close:before, .ov-btn-slide-close:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -50%;
+    background-color: #4741d7; /* color de fondo hover */
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .ov-btn-slide-close:after {
+    left: 100%;
+  }
+  .ov-btn-slide-close:hover {
+    color: #fff; /* color de fuente hover */
+  }
+  .ov-btn-slide-close:hover:before {
+    left: 0;
+  }
+  .ov-btn-slide-close:hover:after {
+    left: 50%;
+  }
